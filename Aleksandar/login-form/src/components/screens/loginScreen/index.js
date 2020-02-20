@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./Header.css";
+import "./Login.css";
 
-const Header = () => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -25,11 +25,11 @@ const Header = () => {
         value={password}
         onChange={e => setPassword(e.target.value)}
       />
-      <button type="submit" disabled={!validateForm()}>
+      <button className="login" type="submit" disabled={!validateForm()}>
         Login
       </button>
     </form>
   );
 };
 
-export default Header;
+export default Login;
